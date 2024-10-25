@@ -19,6 +19,7 @@
 
 #include <gz/sim/System.hh>
 #include <sdf/sdf.hh>
+#include <gz/msgs.hh>
 
 namespace betaflight_gazebo
 {

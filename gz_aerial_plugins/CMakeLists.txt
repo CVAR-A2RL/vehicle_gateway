@@ -33,8 +33,8 @@ find_package(gz-cmake3 REQUIRED)
 # Find the Ignition gui library
 #--------------------------------------
 # Find gz-gui
-gz_find_package(gz-gui7 REQUIRED)
-set(GZ_GUI_VER ${gz-gui7_VERSION_MAJOR})
+gz_find_package(gz-gui8 REQUIRED)
+set(GZ_GUI_VER ${gz-gui8_VERSION_MAJOR})
 
 #--------------------------------------
 # Find gz-plugin
@@ -43,13 +43,13 @@ set(GZ_PLUGIN_VER ${gz-plugin2_VERSION_MAJOR})
 
 #--------------------------------------
 # Find gz-msgs
-gz_find_package(gz-msgs9 REQUIRED)
-set(GZ_MSGS_VER ${gz-msgs9_VERSION_MAJOR})
+gz_find_package(gz-msgs10 REQUIRED)
+set(GZ_MSGS_VER ${gz-msgs10_VERSION_MAJOR})
 
 #--------------------------------------
 # Find gz-transport
-gz_find_package(gz-transport12 REQUIRED)
-set(GZ_TRANSPORT_VER ${gz-transport12_VERSION_MAJOR})
+gz_find_package(gz-transport13 REQUIRED)
+set(GZ_TRANSPORT_VER ${gz-transport13_VERSION_MAJOR})
 
 #--------------------------------------
 # Find gz-common
@@ -74,7 +74,7 @@ add_library(DroneHmi SHARED ${headers_MOC}
   ${resources_rcc}
 )
 target_link_libraries(DroneHmi
-  gz-gui7::gz-gui7
+  gz-gui8::gz-gui8
   gz-common5::gz-common5
   gz-msgs${GZ_MSGS_VER}::gz-msgs${GZ_MSGS_VER}
   gz-plugin${GZ_PLUGIN_VER}::register
