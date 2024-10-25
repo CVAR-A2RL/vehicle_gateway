@@ -1,3 +1,17 @@
+# Additional stuff that might to be done
+Install ```sudo apt install libgz-gui8-dev```.
+For the SITL to compile (betaflight-sim) you need to use 
+arm-none-eabi-gcc 10.3.1.
+
+Check with ```arm-none-eabi-gcc --version```.
+
+If not installed: 
+- go to https://developer.arm.com/downloads/-/gnu-rm.
+- download gcc-arm-none-eabi-10.3-2021.10-aarch64-linux.tar.bz2.
+- extract it wherever you want.
+- create symlink with sudo ln -sf /path/to/desired/version/arm-none-eabi-gcc /usr/bin/arm-none-eabi-gcc.
+- ensure you don't have binary path of other version in your $PATH
+
 # Vehicle Gateway
 
 The goal of this project is to create a pluginlib-based C++ library that can interface with several vehicle SDK's.
